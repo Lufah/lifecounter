@@ -1,0 +1,75 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/numOfPlayers"
+        android:editable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:textSize="20sp"
+        android:text="@string/twoPlayers"
+        android:layout_centerHorizontal="true"
+
+        android:textColor="#454545" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/addPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/numOfPlayers"
+        android:textSize="20sp"
+        android:text="@string/plus"
+    />
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@+id/numOfPlayers"
+
+        >
+        <LinearLayout
+            android:id="@+id/scrollArea"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/rows"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+        />
+
+
+    <TextView
+        android:id="@+id/loser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/rows"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FF2B0F"
+        android:text=""
+        android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
